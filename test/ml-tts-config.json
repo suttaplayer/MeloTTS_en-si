@@ -1,0 +1,22 @@
+{
+    "None": {
+        "None": {
+            "config": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/config.json",
+            "checkpoint": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/checkpoint.pth"
+        }
+    },
+    "EN": {
+        "EN-AU": {
+            "config": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/config.json",
+            "checkpoint": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/checkpoint.pth"
+        },
+        "EN-BR": {
+            "config": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/config.json",
+            "checkpoint": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/checkpoint.pth"
+        },
+        "EN-US": {
+            "config": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/config.json",
+            "checkpoint": "/home/ash/.cache/huggingface/hub/models--myshell-ai--MeloTTS-English/snapshots/0f6ecee6633a651c0d6e6629274e6347266e024d/checkpoint.pth"
+        }
+    }
+}

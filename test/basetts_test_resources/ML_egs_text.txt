@@ -1,0 +1,3 @@
+This is the default voice of the narrator. [EN,EN-BR]That really takes the biscuit. Im chuffed to bits![EN,EN-BR] [EN,EN-US]Howdy partner. Have you got ants in your pants?[EN,EN-US] [EN,EN-AU]Fair crack of the whip mate. Its six of one, half a dozen of the other.[EN,EN-AU] 
+
+Hopefully, the US, UK and Australian voices were synthesized in there proper accents.
