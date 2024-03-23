@@ -3,6 +3,9 @@ from transformers import AutoTokenizer, AutoModelForMaskedLM, Trainer, TrainingA
 import pandas as pd
 import torch
 
+# Check if CUDA is available
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 # Load and preprocess data
 DATA_PATH = "./data/sinhala-pali_sentences-bert.csv"
 pandas_df = pd.read_csv(DATA_PATH, sep='|')
@@ -31,6 +34,9 @@ training_args = TrainingArguments(
 # Load model
 model = AutoModelForMaskedLM.from_pretrained('bert-base-uncased')
 
+# Move model to device
+model.to(device)
+
 # Define compute_metrics function
 def compute_metrics(pred):
     labels_ids = pred.label_ids
@@ -46,7 +52,7 @@ def compute_loss(model, inputs):
     loss = loss_fn(logits.view(-1, model.config.vocab_size), labels.view(-1))
     return loss
 
-
+# Define Trainer
 class CustomTrainer(Trainer):
     def compute_loss(self, model, inputs):
         labels = inputs.pop("labels")
@@ -55,8 +61,8 @@ class CustomTrainer(Trainer):
         loss_fn = torch.nn.CrossEntropyLoss()
         loss = loss_fn(logits.view(-1, model.config.vocab_size), labels.view(-1))
         return loss
-    
-# Define Trainer
+
+# Initialize trainer with custom Trainer class
 trainer = CustomTrainer(
     model=model,
     args=training_args,
@@ -68,5 +74,6 @@ trainer = CustomTrainer(
 # Train model
 trainer.train()
 
+# Save the trained model
 output_model_dir = './model'
 trainer.save_model(output_model_dir)
